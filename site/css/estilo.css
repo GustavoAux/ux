@@ -1,0 +1,28 @@
+.titulo { font-size: 24px; }
+.subtitulo { font-size: 18px; }
+.conteudo {
+    margin-top: 46px; 
+}
+.altura {
+    min-height: 60px;
+}
+.altura-user {
+    min-height: 260px;
+}
+.imagem {
+    width: 200px;
+}
+
+.largura-usr-nav {
+    width: 500px;
+}
+.notvisible{
+    display: none;
+}
+
+section {
+    min-height: 650px;
+}
+
+.especiais {
+}
