@@ -15,6 +15,7 @@
     <script src="js/funcoes.js"></script>
     <script src="js/classes.js"></script>
     <script src="js/base.js"></script>
+    <script src="https://kit.fontawesome.com/568a96625b.js"></script>
 </head>
 
 <body>
@@ -22,31 +23,35 @@
     <header>
         <nav class="w3-top w3-bar w3-teal w3-center ">
             <span class="w3-left">
-                <a href="#status-hotel" ng-click="trocaSubtitulo('Status Hotel')"
+                <a href="#status-hotel" ng-click="trocaSubtituloEAparece('Status Hotel', 'status-hotel')"
                     class="w3-bar-item w3-button w3-mobile">
                     {{titulo+' - '+subtitulo}}
                 </a>
             </span>
 
             <span class="">
-                <a href="#rooms-status" ng-click="trocaSubtitulo('Room Status')" class="w3-button w3-blue">Total use
+                <a href="#rooms-status" ng-click="trocaSubtituloEAparece('Room Status', 'rooms-status')" class="w3-button w3-blue">
+                    <i class="fas fa-percentage"></i>
+                    Total use
                     <span class="w3-badge w3-yellow">
                         {{quantidadeOcupados}}%
                     </span></a>
-                <a href="#rooms-maintenance" ng-click="trocaSubtitulo('Rooms Manentence')"
-                    class="w3-button w3-pink">Room
-                    Maintenance
+                <a href="#rooms-maintenance" ng-click="trocaSubtituloEAparece('Rooms Manentence', 'rooms-maintenance')" class="w3-button w3-pink">
+                    <i class="fas fa-screwdriver"></i>
+                    &nbsp;
+                    Rooms Maintenance
                     <span class="w3-badge w3-yellow">
                         {{quantidadeEmManutencao}}
                     </span></a>
-                <a href="#room-reservated" ng-click="trocaSubtitulo('Room Reservated')"
-                    class="w3-button w3-purple">Rooms
-                    Reservated's
+                <a href="#room-reservated" ng-click="trocaSubtituloEAparece('Room Reservated', 'room-reservated')" class="w3-button w3-purple">
+                    <i class="fas fa-suitcase-rolling"></i>Rooms Reservated's
                     <span class="w3-badge w3-yellow">
                         {{quantidadeReservados}}
                     </span>
                 </a>
-                <a href="#messages" ng-click="trocaSubtitulo('Messages')" class="w3-button w3-green">New Messages
+                <a href="#messages" ng-click="trocaSubtituloEAparece('Messages', 'messages')" class="w3-button w3-green">
+                    <i class="fas fa-comments"></i>
+                    New Messages
                     <span class="w3-badge w3-yellow">
                         {{quantidade_mensagens}}
                     </span>
@@ -63,7 +68,11 @@
                         <a href="#" class="w3-button w3-transparent"  value="Chinese">Chinese</a>
                     </div>
                 </a> -->
-                <a href="#" class="w3-button w3-transparent">{{status_login}}</a>
+                <a href="#" class="w3-button w3-transparent">
+                    <i class="fas fa-sign-out-alt"></i>
+                    {{status_login}}
+                    <i class="fas fa-user"></i>
+                </a>
             </span>
         </nav>
     </header>
@@ -71,23 +80,31 @@
 
 
     <nav class="w3-bottom w3-bar w3-teal">
-        <a href="#status-hotel" ng-click="trocaSubtitulo('Status Hotel')" class="w3-bar-item w3-button w3-mobile">Status
-            Hotel</a>
-        <a href="#rooms-maintenance" ng-click="trocaSubtitulo('Rooms Manentence')"
-            class="w3-bar-item w3-button w3-mobile">Rooms Manentence</a>
-        <a href="#messages" ng-click="trocaSubtitulo('Messages')" class="w3-bar-item w3-button w3-mobile">Messages</a>
-        <a href="#checkin-checkout" ng-click="trocaSubtitulo('Check-In / Check-Out')"
-            class="w3-bar-item w3-button w3-mobile">Check-In / Check-Out</a>
-        <a href="#room-reservated" ng-click="trocaSubtitulo('Room Reservated')"
-            class="w3-bar-item w3-button w3-mobile">Reservations</a>
-        <a href="#rooms-status" ng-click="trocaSubtitulo('Room Status')" class="w3-bar-item w3-button w3-mobile">Rooms
-            Status</a>
-        <a href="#rooms-services" ng-click="trocaSubtitulo('Rooms Services')"
-            class="w3-bar-item w3-button w3-mobile">Rooms Services</a>
+        <a href="#status-hotel" ng-click="trocaSubtituloEAparece('Status Hotel', 'status-hotel')" class="w3-bar-item w3-button w3-mobile">
+            <i class="fas fa-hotel"></i>
+            Status Hotel</a>
+        <a href="#rooms-maintenance" ng-click="trocaSubtituloEAparece('Rooms Manentence', 'rooms-maintenance')"
+            class="w3-bar-item w3-button w3-mobile">
+            <i class="fas fa-screwdriver"></i>
+            &nbsp;
+            Rooms Manentence</a>
+        <a href="#messages" ng-click="trocaSubtituloEAparece('Messages', 'messages')" class="w3-bar-item w3-button w3-mobile">
+            <i class="fas fa-comments"></i>
+            Messages</a>
+        <a href="#checkin-checkout" ng-click="trocaSubtituloEAparece('Check-In / Check-Out', 'checkin-checkout')"
+            class="w3-bar-item w3-button w3-mobile"><i class="fas fa-luggage-cart"></i>Check-In / Check-Out</a>
+        <a href="#room-reservated" ng-click="trocaSubtituloEAparece('Room Reservated', 'room-reservated')" class="w3-bar-item w3-button w3-mobile">
+            <i class="fas fa-suitcase-rolling"></i>
+            Reservations</a>
+        <a href="#rooms-status" ng-click="trocaSubtituloEAparece('Room Status', 'rooms-status')" class="w3-bar-item w3-button w3-mobile">
+            <i class="fas fa-percentage"></i>
+            Rooms Status</a>
+        <a href="#rooms-services" ng-click="trocaSubtituloEAparece('Rooms Services', 'rooms-services')" class="w3-bar-item w3-button w3-mobile">
+            <i class="fas fa-concierge-bell"></i>Rooms Services</a>
     </nav>
 
     <main class="w3-container w3-margin-top">
-        <section class="w3-container w3-content conteudo" id="checkin-checkout">
+        <section class="w3-container w3-content conteudo notvisible" id="checkin-checkout">
             <br><br><br>
             <h3 class="w3-center">Check-in/Check-out</h3>
 
@@ -202,6 +219,7 @@
                     <p>Status:
                         <span ng-if="usuario.numero == apartamento.numero" ng-repeat="apartamento in apartamentos">
                             {{apartamento.status}}
+                            <i class="{{apartamento.icone}}"></i>
                         </span>
                     </p>
                 </div>
@@ -241,10 +259,7 @@
                 </div>
             </div>
         </section>
-        <section class="w3-container w3-content conteudo">
-
-        </section>
-        <section class="w3-container w3-content conteudo" id="status-hotel">
+        <section class="w3-container w3-content conteudo " id="status-hotel">
             <br><br><br>
             <h3 class="w3-center">Status Hotel</h3>
 
@@ -268,7 +283,7 @@
                 <h4 class="w3-center">Messages</h4>
                 <p class="w3-center">
                     <a href="#messages" class="w3-btn w3-round w3-red">
-                        New
+                        New <i class="fas fa-comments"></i>
                         <span class="w3-badge w3-yellow">
                             {{quantidade_mensagens}}
                         </span>
@@ -277,7 +292,7 @@
             </div>
 
         </section>
-        <section class="w3-container w3-content conteudo" id="rooms-maintenance">
+        <section class="w3-container w3-content conteudo notvisible" id="rooms-maintenance">
             <br><br><br>
             <h3 class="w3-center">Rooms Maintenance</h3>
             <p>The number of rooms in maintenance is
@@ -290,6 +305,7 @@
                     <p>Status:
                         <span class="w3-text-pink">
                             {{apartamento.status}}
+                            <i class="{{apartamento.icone}}"></i>
                         </span>
                     </p>
                     <p>
@@ -301,7 +317,7 @@
             </div>
         </section>
 
-        <section class="w3-container w3-content conteudo" id="messages">
+        <section class="w3-container w3-content conteudo notvisible" id="messages">
             <br><br><br>
             <h3 class="w3-center">Messages</h3>
             <p>The number of messages is
@@ -357,7 +373,7 @@
             </ul>
 
         </section>
-        <section class="w3-container w3-content conteudo" id="room-reservated">
+        <section class="w3-container w3-content conteudo notvisible" id="room-reservated">
             <br> <br> <br>
             <h3 class="w3-center">Reservations</h3>
             <p>The number of rooms reservated's is
@@ -369,7 +385,7 @@
                 <div class="w3-container w3-panel">
                     <h3>Room: {{apartamento.tipo}}</h3>
                     <p>Status:
-                        <span class="w3-text-purple">{{apartamento.status}}</span>
+                        <span class="w3-text-purple">{{apartamento.status}}<i class="{{apartamento.icone}}"></i></span>
                     </p>
                     <p>
                         Number:
@@ -415,7 +431,7 @@
 
             </div>
         </section>
-        <section class="w3-container w3-content conteudo" id="rooms-status">
+        <section class="w3-container w3-content conteudo notvisible" id="rooms-status">
             <br><br><br>
             <h3 class="w3-center">Rooms Status</h3>
 
@@ -475,8 +491,7 @@
                 </div>
             </div>
         </section>
-        <section class="w3-container w3-content conteudo"></section>
-        <section class="w3-container w3-content conteudo"></section>
+        <section class="w3-container w3-content conteudo notvisible"></section>
 
 
     </main>

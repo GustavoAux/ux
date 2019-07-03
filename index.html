@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" ng-app="ux" ng-controller="uxCtrl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content=1;url="/site/index.html">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8" />
+
+    <title ng-bind="titulo+' - '+subtitulo"></title>
+
+    <style>
+        @import "../node_modules/w3-css/3/w3.css";
+        @import "css/estilo.css";
+    </style>
+    <script src="js/lorem-ipsum-js/src/lorem-ipsum.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="js/funcoes.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/base.js"></script>
+    <script src="https://kit.fontawesome.com/568a96625b.js"></script>
 </head>
+
 <body>
     
+    <nav class="w3-bar w3-teal">
+        <a class="w3-button w3-bar-item" href="site/login.html">Página de Login</a>
+        <a class="w3-button w3-bar-item" href="site/funcionario.html">Página Funcionário</a>
+        <a class="w3-button w3-bar-item" href="site/user.html">Página Usuário</a>
+    </nav>
+
 </body>
 </html>

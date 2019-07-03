@@ -44,12 +44,49 @@ class Apartemento{
             this.dono = new Pessoa(numero);
         }
         this.quartos = 0;
+        this.icone = '';
+
+        switch(this.status){
+            case 'Occupied':
+                this.icone = 'fas fa-lock';
+            break;
+            case 'Unoccupied':
+                this.icone = 'fas fa-lock-open';
+            break;
+            case 'Reservated':
+                this.icone = 'fas fa-suitcase-rolling" aria-hidden="true"';
+            break;
+            case 'Maintenance':
+                this.icone = 'fas fa-screwdriver';
+            break;
+        }
+
         switch(this.tipo){
-            case 'Single': this.quartos = [0, 1]; this.tamanho_quarto = 'Small'; break;
-            case 'Double': this.quartos = [0, 1, 2]; this.tamanho_quarto = 'Medium'; break;
-            case 'Luxe': this.quartos = [0, 1, 2]; this.tamanho_quarto = 'Big'; break;
-            case 'Master': this.quartos = [0, 1, 2, 3]; this.tamanho_quarto = 'Large'; break;
-            case 'Presidential': this.quartos = [0, 1, 2, 3, 4]; this.tamanho_quarto = 'Large'; break;
+            case 'Single': 
+                this.quartos = [0, 1]; 
+                this.tamanho_quarto = 'Small'; 
+                
+            break;
+            case 'Double': 
+                this.quartos = [0, 1, 2]; 
+                this.tamanho_quarto = 'Medium'; 
+                
+            break;
+            case 'Luxe': 
+                this.quartos = [0, 1, 2]; 
+                this.tamanho_quarto = 'Big';
+                
+            break;
+            case 'Master': 
+                this.quartos = [0, 1, 2, 3]; 
+                this.tamanho_quarto = 'Large'; 
+                
+            break;
+            case 'Presidential': 
+                this.quartos = [0, 1, 2, 3, 4]; 
+                this.tamanho_quarto = 'Large'; 
+                
+            break;
         }
     }
     setStatus(status){

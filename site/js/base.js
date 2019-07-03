@@ -68,7 +68,7 @@ angular.module('ux').controller('uxCtrl', ($scope)=>{
 
     $scope.trocaSubtituloEAparece = (subtitulo, id)=> {
         $scope.subtitulo = subtitulo;
-        let x = document.querySelector('.especiais');
+        let x = document.getElementsByClassName('conteudo');
         for(let i = 0; i < x.length; i++){
             x[i].style.display = 'none';
         }
