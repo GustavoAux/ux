@@ -99,6 +99,25 @@
 
                 <h3 class="w3-center">Services</h3>
 
+                <div class="w3-card w3-container w3-panel w3-display-container">
+                    <label>
+                        Select service:
+                    </label>
+                    <select class="w3-select" ng-model="tiposervico">
+                        <option ng-repeat="servico in tipo_servico" class="servico">
+                            {{servico}}
+                        </option>
+                    </select>
+                    <div class="w3-panel w3-container w3-display-right">
+                        <button class="w3-btn w3-green">
+                            Buy
+                        </button>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
             </section>
 
             <section class="conteudo w3-container w3-panel especiais notvisible" id="food-service">

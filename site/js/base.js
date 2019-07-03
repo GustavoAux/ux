@@ -110,6 +110,18 @@ angular.module('ux').controller('uxCtrl', ($scope)=>{
         $scope.servicos.push(new Service(randomizar_lista($scope.usuarios)));
     };
     
+    $scope.tipo_servico = [
+        'Food',
+        'Laundry service',
+        'Rent of Clothes',
+        'Academy',
+        'Swimming pool - indoor',
+        'Meeting rooms and boardrooms',
+        'Car Rental',
+        'Bicycle Rental',
+        'Tickets',
+        'Excursion'
+    ];
     
 
     $scope.nacionalidades = [
