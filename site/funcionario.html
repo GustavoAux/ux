@@ -25,6 +25,7 @@
             <span class="w3-left">
                 <a href="#status-hotel" ng-click="trocaSubtituloEAparece('Status Hotel', 'status-hotel')"
                     class="w3-bar-item w3-button w3-mobile">
+                    <i class="fas fa-home"></i>
                     {{titulo+' - '+subtitulo}}
                 </a>
             </span>
@@ -92,7 +93,8 @@
             <i class="fas fa-comments"></i>
             Messages</a>
         <a href="#checkin-checkout" ng-click="trocaSubtituloEAparece('Check-In / Check-Out', 'checkin-checkout')"
-            class="w3-bar-item w3-button w3-mobile"><i class="fas fa-luggage-cart"></i>Check-In / Check-Out</a>
+            class="w3-bar-item w3-button w3-mobile">
+            <i class="fas fa-luggage-cart"></i>Check-In / Check-Out</a>
         <a href="#room-reservated" ng-click="trocaSubtituloEAparece('Room Reservated', 'room-reservated')" class="w3-bar-item w3-button w3-mobile">
             <i class="fas fa-suitcase-rolling"></i>
             Reservations</a>
@@ -106,9 +108,9 @@
     <main class="w3-container w3-margin-top">
         <section class="w3-container w3-content conteudo notvisible" id="checkin-checkout">
             <br><br><br>
-            <h3 class="w3-center">Check-in/Check-out</h3>
+            <h3 class="w3-center">Check-in/Check-out <i class="fas fa-luggage-cart"></i></h3>
 
-            <h4>Cheack-in</h4>
+            <h4>Cheack-in <i class="fas fa-luggage-cart"></i></h4>
             <div class="w3-card-2 w3-display-container w3-margin w3-padding">
                 <form>
                     <label for="nome">
@@ -174,7 +176,7 @@
             </div>
 
             <hr />
-            <h4>Cheack-out</h4>
+            <h4>Cheack-out <i class="fas fa-luggage-cart"></i></h4>
             <div class="w3-card-2 w3-display-container w3-margin w3-padding" ng-repeat="usuario in usuarios">
                 <h4>{{usuario.nome}}</h4>
                 <p>Nationality: {{usuario.nacionalidade}}</p>
@@ -261,7 +263,7 @@
         </section>
         <section class="w3-container w3-content conteudo " id="status-hotel">
             <br><br><br>
-            <h3 class="w3-center">Status Hotel</h3>
+            <h3 class="w3-center">Status Hotel <i class="fas fa-hotel"></i></h3>
 
 
             <div class="w3-container w3-panel w3-margin w3-card-2">
@@ -294,7 +296,7 @@
         </section>
         <section class="w3-container w3-content conteudo notvisible" id="rooms-maintenance">
             <br><br><br>
-            <h3 class="w3-center">Rooms Maintenance</h3>
+            <h3 class="w3-center">Rooms Maintenance <i class="fas fa-screwdriver"></i></h3>
             <p>The number of rooms in maintenance is
                 <span class="w3-text-blue">{{quantidadeEmManutencao}}</span>.
             </p>
@@ -319,7 +321,7 @@
 
         <section class="w3-container w3-content conteudo notvisible" id="messages">
             <br><br><br>
-            <h3 class="w3-center">Messages</h3>
+            <h3 class="w3-center">Messages <i class="fas fa-comments"></i></h3>
             <p>The number of messages is
                 <span class="w3-text-blue">{{quantidade_mensagens}}</span>.
             </p>
@@ -357,6 +359,8 @@
                                         <div class="w3-display-right">
                                             <button class="w3-btn w3-green">
                                                 Call Video/Audio
+
+                                                <i class="fas fa-video"></i>/<i class="fas fa-volume-up"></i>
                                             </button>
                                             <button class="w3-btn w3-blue">
                                                 Submit text message
@@ -375,7 +379,7 @@
         </section>
         <section class="w3-container w3-content conteudo notvisible" id="room-reservated">
             <br> <br> <br>
-            <h3 class="w3-center">Reservations</h3>
+            <h3 class="w3-center">Reservations <i class="fas fa-suitcase-rolling"></i></h3>
             <p>The number of rooms reservated's is
                 <span class="w3-text-blue">{{quantidadeReservados}}</span>.
             </p>
@@ -433,7 +437,7 @@
         </section>
         <section class="w3-container w3-content conteudo notvisible" id="rooms-status">
             <br><br><br>
-            <h3 class="w3-center">Rooms Status</h3>
+            <h3 class="w3-center">Rooms Status <i class="fas fa-percentage"></i></h3>
 
             <div class="w3-card-2 w3-margin w3-display-container  altura" ng-repeat="apartamento in apartamentos">
                 <div class="w3-panel w3-container">

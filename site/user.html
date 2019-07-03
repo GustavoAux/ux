@@ -24,7 +24,7 @@
         <nav class="w3-bottom  w3-bar w3-teal w3-center">
             <span class="w3-left">
                 <a href="#status-hotel" ng-click="trocaSubtitulo('Welcome')" class="w3-bar-item w3-button w3-mobile">
-                    {{titulo+' - '+subtitulo}}
+                        <i class="fas fa-home"></i>{{titulo+' - '+subtitulo}}
                 </a>
             </span>
             <!--
@@ -61,14 +61,15 @@
                         <a href="#" class="w3-button w3-transparent"  value="Chinese">Chinese</a>
                     </div>
                 </a> -->
-            <a href="#" class="w3-button w3-transparent">{{status_login_usuario}}</a>
+            <a href="#" class="w3-button w3-transparent">{{status_login_usuario}}
+                    <i class="fas fa-user"></i></a>
             </span>
         </nav>
     </header>
 
 
     <div class="w3-cell-row ">
-        <nav class="w3-bar w3-bar-block w3-teal w3-cell  largura-usr-nav w3-mobile">
+        <nav class="w3-bar  w3-bar-block w3-teal w3-cell  largura-usr-nav w3-mobile">
             <a href="#services" ng-click="trocaSubtituloEAparece('Services', 'services')"
                 class="w3-bar-item w3-button w3-mobile">Services</a>
             <a href="#food-service" ng-click="trocaSubtituloEAparece('Food Service', 'food-service')"
@@ -89,7 +90,7 @@
                 <p class="w3-center">Select what you want to do. </p>
             </section> 
 
-            <section class="conteudo w3-container w3-panel especiais" id="services">
+            <section class="conteudo w3-container notvisible w3-panel especiais" id="services">
 
                     <h3 class="w3-center">Services</h3>
     
@@ -153,10 +154,10 @@
                     <div class="w3-container w3-panel w3-margin w3-display-container">
                         <div class="w3-display-right">
                             <button class="w3-btn w3-green">
-                                Call Video
+                                Call Video  <i class="fas fa-video"></i>
                             </button>
                             <button class="w3-btn w3-green">
-                                Call Audio
+                                Call Audio <i class="fas fa-volume-up"></i>
                             </button>
                             <button class="w3-btn w3-blue">
                                 Submit text message
@@ -293,14 +294,14 @@
                     ng-model="status_controle_audio_volume" step="5" min="0" max="100">
     
                 <div class="w3-container w3-panel w3-center">
-                    <input type="submit" class="w3-btn w3-gray" id="status_controle_audio_previus"
-                        name="status_controle_audio_previus" ng-model="status_controle_audio_previus" value="Previus" />
-                    <input type="submit" class="w3-btn w3-green" id="status_controle_audio_play"
-                        name="status_controle_audio_play" model="status_controle_audio_play" value="Play/Pause" />
-                    <input type="submit" id="status_controle_audio_next" name="status_controle_audio_next"
-                        model="status_controle_audio_next" class="w3-btn w3-gray" value="Next" />
-                    <input type="submit" id="status_controle_audio_stop" name="status_controle_audio_stop"
-                        model="status_controle_audio_stop" class="w3-btn w3-black" value="Stop" />
+                    <button class="w3-btn w3-gray" id="status_controle_audio_previus"
+                        name="status_controle_audio_previus" ng-model="status_controle_audio_previus" value="Previus" ><i class="fas fa-fast-backward"></i> </button>
+                    <button class="w3-btn w3-green" id="status_controle_audio_play"
+                        name="status_controle_audio_play" model="status_controle_audio_play"><i class='fas fa-play'></i><i class="fas fa-pause"></i></button> 
+                    <button id="status_controle_audio_next" name="status_controle_audio_next"
+                        model="status_controle_audio_next" class="w3-btn w3-gray" > <i class="fas fa-fast-forward"></i></button>
+                    <button id="status_controle_audio_stop" name="status_controle_audio_stop"
+                        model="status_controle_audio_stop" class="w3-btn w3-black"  ><i class="fas fa-stop"></i></button>
                 </div>
     
                 <br>
