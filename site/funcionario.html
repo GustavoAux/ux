@@ -31,26 +31,30 @@
             </span>
 
             <span class="">
-                <a href="#rooms-status" ng-click="trocaSubtituloEAparece('Room Status', 'rooms-status')" class="w3-button w3-blue">
+                <a href="#rooms-status" ng-click="trocaSubtituloEAparece('Room Status', 'rooms-status')"
+                    class="w3-button w3-blue">
                     <i class="fas fa-percentage"></i>
                     Total use
                     <span class="w3-badge w3-yellow">
                         {{quantidadeOcupados}}%
                     </span></a>
-                <a href="#rooms-maintenance" ng-click="trocaSubtituloEAparece('Rooms Manentence', 'rooms-maintenance')" class="w3-button w3-pink">
+                <a href="#rooms-maintenance" ng-click="trocaSubtituloEAparece('Rooms Manentence', 'rooms-maintenance')"
+                    class="w3-button w3-pink">
                     <i class="fas fa-screwdriver"></i>
                     &nbsp;
                     Rooms Maintenance
                     <span class="w3-badge w3-yellow">
                         {{quantidadeEmManutencao}}
                     </span></a>
-                <a href="#room-reservated" ng-click="trocaSubtituloEAparece('Room Reservated', 'room-reservated')" class="w3-button w3-purple">
+                <a href="#room-reservated" ng-click="trocaSubtituloEAparece('Room Reservated', 'room-reservated')"
+                    class="w3-button w3-purple">
                     <i class="fas fa-suitcase-rolling"></i>Rooms Reservated's
                     <span class="w3-badge w3-yellow">
                         {{quantidadeReservados}}
                     </span>
                 </a>
-                <a href="#messages" ng-click="trocaSubtituloEAparece('Messages', 'messages')" class="w3-button w3-green">
+                <a href="#messages" ng-click="trocaSubtituloEAparece('Messages', 'messages')"
+                    class="w3-button w3-green">
                     <i class="fas fa-comments"></i>
                     New Messages
                     <span class="w3-badge w3-yellow">
@@ -81,7 +85,8 @@
 
 
     <nav class="w3-bottom w3-bar w3-teal">
-        <a href="#status-hotel" ng-click="trocaSubtituloEAparece('Status Hotel', 'status-hotel')" class="w3-bar-item w3-button w3-mobile">
+        <a href="#status-hotel" ng-click="trocaSubtituloEAparece('Status Hotel', 'status-hotel')"
+            class="w3-bar-item w3-button w3-mobile">
             <i class="fas fa-hotel"></i>
             Status Hotel</a>
         <a href="#rooms-maintenance" ng-click="trocaSubtituloEAparece('Rooms Manentence', 'rooms-maintenance')"
@@ -89,19 +94,23 @@
             <i class="fas fa-screwdriver"></i>
             &nbsp;
             Rooms Manentence</a>
-        <a href="#messages" ng-click="trocaSubtituloEAparece('Messages', 'messages')" class="w3-bar-item w3-button w3-mobile">
+        <a href="#messages" ng-click="trocaSubtituloEAparece('Messages', 'messages')"
+            class="w3-bar-item w3-button w3-mobile">
             <i class="fas fa-comments"></i>
             Messages</a>
         <a href="#checkin-checkout" ng-click="trocaSubtituloEAparece('Check-In / Check-Out', 'checkin-checkout')"
             class="w3-bar-item w3-button w3-mobile">
             <i class="fas fa-luggage-cart"></i>Check-In / Check-Out</a>
-        <a href="#room-reservated" ng-click="trocaSubtituloEAparece('Room Reservated', 'room-reservated')" class="w3-bar-item w3-button w3-mobile">
+        <a href="#room-reservated" ng-click="trocaSubtituloEAparece('Room Reservated', 'room-reservated')"
+            class="w3-bar-item w3-button w3-mobile">
             <i class="fas fa-suitcase-rolling"></i>
             Reservations</a>
-        <a href="#rooms-status" ng-click="trocaSubtituloEAparece('Room Status', 'rooms-status')" class="w3-bar-item w3-button w3-mobile">
+        <a href="#rooms-status" ng-click="trocaSubtituloEAparece('Room Status', 'rooms-status')"
+            class="w3-bar-item w3-button w3-mobile">
             <i class="fas fa-percentage"></i>
             Rooms Status</a>
-        <a href="#rooms-services" ng-click="trocaSubtituloEAparece('Rooms Services', 'rooms-services')" class="w3-bar-item w3-button w3-mobile">
+        <a href="#rooms-services" ng-click="trocaSubtituloEAparece('Rooms Services', 'rooms-services')"
+            class="w3-bar-item w3-button w3-mobile">
             <i class="fas fa-concierge-bell"></i>Rooms Services</a>
     </nav>
 
@@ -284,10 +293,23 @@
             <div class="w3-container w3-panel w3-margin w3-card-2">
                 <h4 class="w3-center">Messages</h4>
                 <p class="w3-center">
-                    <a href="#messages" class="w3-btn w3-round w3-red">
-                        New <i class="fas fa-comments"></i>
+                    <a href="#messages" ng-click="trocaSubtituloEAparece('Messages', 'messages')"
+                        class="w3-btn w3-round w3-red"> New <i class="fas fa-comments"></i>
                         <span class="w3-badge w3-yellow">
                             {{quantidade_mensagens}}
+                        </span>
+                    </a>
+                </p>
+            </div>
+
+            <div class="w3-container w3-panel w3-margin w3-card-2">
+                <h4 class="w3-center">Rooms Services</h4>
+                <p class="w3-center">
+                    <a href="#rooms-services" ng-click="trocaSubtituloEAparece('Rooms Services', 'rooms-services')"
+                        class="w3-btn w3-round w3-red">
+                        New <i class="fas fa-concierge-bell"></i>
+                        <span class="w3-badge w3-yellow">
+                            {{quantidade_servicos}}
                         </span>
                     </a>
                 </p>
@@ -363,6 +385,7 @@
                                                 <i class="fas fa-video"></i>/<i class="fas fa-volume-up"></i>
                                             </button>
                                             <button class="w3-btn w3-blue">
+                                                <i class="fas fa-location-arrow"></i>
                                                 Submit text message
                                             </button>
                                         </div>
@@ -495,7 +518,39 @@
                 </div>
             </div>
         </section>
-        <section class="w3-container w3-content conteudo notvisible"></section>
+        <section class="w3-container w3-content conteudo notvisible" id="rooms-services">
+            <br>
+            <br>
+            <br>
+
+            <h3 class="w3-center">Rooms Service</h3>
+
+
+
+            <div class="w3-border w3-container w3-panel" ng-repeat="servico in servicos">
+                <h4 class="w3-center">{{servico.pessoa.nome}}</h4>
+                <p><b>Room: </b>{{servico.pessoa.numero}}</p>
+                <p><b>Service:</b> {{servico.servico}}</p>
+                <div class="w3-border w3-container w3-panel" ng-if="servico.servico == 'Food'">
+                    <h4 class="w3-center">{{servico.comida.prato}}</h4>
+                    <p class="w3-justify">{{servico.comida.descricao}}</p>
+                    <div>
+                        <img src="{{servico.comida.imagem}}" class="imagem">
+                    </div>
+                    <p>Price:
+                        <span class="w3-text-green">{{servico.comida.preco}}</span>
+                    </p>
+                </div>
+                <p><b>Price:</b>
+                    <span class="w3-text-green" ng-if="servico.servico == 'Food'">
+                        {{servico.preco = servico.comida.preco}}
+                    </span>
+                    <span class="w3-text-green" ng-if="servico.servico != 'Food'">
+                        {{servico.preco}}
+                    </span>
+                </p>
+            </div>
+        </section>
 
 
     </main>

@@ -166,3 +166,26 @@ class Food{
         this.preco = (Math.random() * Math.floor(Math.random() * 200)).toFixed(2);
     }
 }
+
+class Service{
+    constructor(pessoa){
+        let tipo = [
+            'Food',
+            'Laundry service',
+            'Rent of Clothes',
+            'Academy',
+            'Swimming pool - indoor',
+            'Meeting rooms and boardrooms',
+            'Car Rental',
+            'Bicycle Rental',
+            'Tickets',
+            'Excursion'
+        ];
+        this.servico = randomizar_lista(tipo);
+        this.preco = (Math.random() * (Math.random() * 1000)).toFixed(2);
+        if(this.servico == 'Food'){
+            this.comida = new Food();
+        }
+        this.pessoa = pessoa;
+    }
+}

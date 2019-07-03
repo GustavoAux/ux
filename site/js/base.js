@@ -102,6 +102,14 @@ angular.module('ux').controller('uxCtrl', ($scope)=>{
         $scope.mensagens.push(new Mensagem(randomizar_lista($scope.usuarios)));
     };
     
+
+    $scope.quantidade_servicos = randomizar_inteiro(1, $scope.usuarios.length);
+
+    $scope.servicos = [];
+    for(let i  = 0; i < $scope.quantidade_servicos; i++){
+        $scope.servicos.push(new Service(randomizar_lista($scope.usuarios)));
+    };
+    
     
 
     $scope.nacionalidades = [
