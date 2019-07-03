@@ -27,7 +27,7 @@
                     {{titulo+' - '+subtitulo}}
                 </a>
             </span>
-<!--
+            <!--
             <span class="">
                 <a href="#rooms-status" ng-click="trocaSubtitulo('Room Status')" class="w3-button w3-blue">Total use
                     <span class="w3-badge w3-yellow">
@@ -61,234 +61,258 @@
                         <a href="#" class="w3-button w3-transparent"  value="Chinese">Chinese</a>
                     </div>
                 </a> -->
-                <a href="#" class="w3-button w3-transparent">{{status_login_usuario}}</a>
+            <a href="#" class="w3-button w3-transparent">{{status_login_usuario}}</a>
             </span>
         </nav>
     </header>
 
 
-<div class="w3-cell-row ">
-    <nav class="w3-bar w3-bar-block w3-teal w3-cell w3-cell-middle largura-usr-nav w3-mobile" >
-        <a href="#services" ng-click="trocaSubtituloEAparece('Services', 'services')" class="w3-bar-item w3-button w3-mobile">Services</a>
-        <a href="#food-service" ng-click="trocaSubtituloEAparece('Food Service', 'food-service')" class="w3-bar-item w3-button w3-mobile">Food
-            Service</a>
-        <a href="#message" ng-click="trocaSubtituloEAparece('Message', 'message')" class="w3-bar-item w3-button w3-mobile">Message</a>
-        <a href="#controls-room" ng-click="trocaSubtituloEAparece('Controls room', 'controls-room')" class="w3-bar-item w3-button w3-mobile">Controls
-            room</a>
-    </nav>
+    <div class="w3-cell-row ">
+        <nav class="w3-bar w3-bar-block w3-teal w3-cell  largura-usr-nav w3-mobile">
+            <a href="#services" ng-click="trocaSubtituloEAparece('Services', 'services')"
+                class="w3-bar-item w3-button w3-mobile">Services</a>
+            <a href="#food-service" ng-click="trocaSubtituloEAparece('Food Service', 'food-service')"
+                class="w3-bar-item w3-button w3-mobile">Food
+                Service</a>
+            <a href="#message" ng-click="trocaSubtituloEAparece('Message', 'message')"
+                class="w3-bar-item w3-button w3-mobile">Message</a>
+            <a href="#controls-room" ng-click="trocaSubtituloEAparece('Controls room', 'controls-room')"
+                class="w3-bar-item w3-button w3-mobile">Controls
+                room</a>
+        </nav>
 
-    <main class="w3-container w3-margin-top w3-cell w3-mobile">
-        <section class="w3-container w3-panel especiais" id="inicial">
-            
-            <h3 class="w3-center">Welcome</h3>
+        <main class="w3-container w3-margin-top w3-cell w3-mobile">
+            <section class="conteudo w3-container w3-panel especiais" id="inicial">
 
-            <p class="w3-center">Select what you want to do. </p>
-        </section> 
-        <section class="w3-container w3-panel especiais notvisible" id="food-service">
-            
-            <h3 class="w3-center">Food Service</h3>
+                <h3 class="w3-center">Welcome</h3>
 
-            <div class="w3-display-container w3-border-bottom  w3-container w3-panel w3-margin altura-user " ng-repeat="prato in pratos">
-                <div class="w3-padding-16 ">
-                    <div class="w3-display-topleft">
-                        <img src="{{prato.imagem}}" class=" imagem" />
+                <p class="w3-center">Select what you want to do. </p>
+            </section> 
+
+            <section class="conteudo w3-container w3-panel especiais" id="services">
+
+                    <h3 class="w3-center">Services</h3>
+    
+                </section> 
+
+            <section class="conteudo w3-container w3-panel especiais notvisible" id="food-service">
+
+                <h3 class="w3-center">Food Service</h3>
+
+                <div class="w3-display-container w3-border-bottom  w3-container w3-panel w3-margin altura-user "
+                    ng-repeat="prato in pratos">
+                    <div class="w3-padding-16 ">
+                        <div class="w3-display-topleft">
+                            <img src="{{prato.imagem}}" class=" imagem" />
+                        </div>
+                        <h4 class="w3-display-topmiddle">{{prato.prato}}</h4>
+                        <div class="w3-display-bottomright ">
+                            <p class="w3-justify">{{prato.descricao}}</p>
+                        </div>
+                        <div class="w3-display-topright w3-text-green">
+                            <p>{{prato.preco}} U$</p>
+                            <button class="w3-btn w3-green">
+                                Buy
+                            </button>
+                        </div>
                     </div>
-                    <h4 class="w3-display-topmiddle">{{prato.prato}}</h4>
-                    <div class="w3-display-bottomright ">
-                        <p class="w3-justify">{{prato.descricao}}</p>
+                </div>
+            </section>
+
+            <section class="conteudo w3-container w3-panel especiais notvisible" id="message">
+
+                <h3 class="w3-center">Messages</h3>
+
+                <div class="w3-display-container w3-card-2">
+                    <h4 class="w3-center w3-pale-red w3-padding">
+                        Message:
+                    </h4>
+                    <div class="w3-panel w3-container">
+
+                        <select class=" w3-select">
+                            <optgroup label="Employees">
+                                <option value="{{atendente.nome}}">{{atendente.nome}}</option>
+                            </optgroup>
+                            <optgroup label="Users">
+                                <option value="{{usuario.nome}}" ng-repeat="usuario in usuarios">{{usuario.nome}} -
+                                    <b>Room:
+                                    </b>{{usuario.numero}}</option>
+                            </optgroup>
+                        </select>
                     </div>
-                    <div class="w3-display-topright w3-text-green">
-                        <p>{{prato.preco}} U$</p>
-                        <button class="w3-btn w3-green">
-                            Buy
-                        </button>
+                    <div class="w3-container w3-panel">
+                        <p class="w3-justify">{{mensagem.mensagem}}</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w3-container w3-panel especiais notvisible" id="message">
-            
-            <h3 class="w3-center">Messages</h3>
-
-            <div class="w3-display-container w3-card-2">
-                <h4 class="w3-center w3-pale-red w3-padding">
-                    Message:
-                </h4>
-                <div class="w3-panel w3-container">
-
-                    <select class=" w3-select">
-                        <optgroup label="Employees">
-                            <option value="{{atendente.nome}}">{{atendente.nome}}</option>
-                        </optgroup>
-                        <optgroup label="Users">
-                            <option value="{{usuario.nome}}" ng-repeat="usuario in usuarios">{{usuario.nome}} - <b>Room:
-                                </b>{{usuario.numero}}</option>
-                        </optgroup>
-                    </select>
-                </div>
-                <div class="w3-container w3-panel">
-                    <p class="w3-justify">{{mensagem.mensagem}}</p>
-                </div>
-                <div class="w3-container w3-panel">
-                    <input type="text" placeholder="Enter your message" class="w3-input w3-border" />
-                </div>
-                <!--
+                    <div class="w3-container w3-panel">
+                        <input type="text" placeholder="Enter your message" class="w3-input w3-border" />
+                    </div>
+                    <!--
                 <div class="w3-display-topright">
                     <button class="w3-btn  w3-green" ng-click="chamar_close_and_pay(mensagem.usuario.nome, mensagem.usuario.numero+'-message', mensagem.usuario.nome, 'none', false)">&times;</button>
                 </div>-->
-                <div class="w3-container w3-panel w3-margin w3-display-container">
-                    <div class="w3-display-right">
-                        <button class="w3-btn w3-green">
-                            Call Video
-                        </button>
-                        <button class="w3-btn w3-green">
-                            Call Audio
-                        </button>
-                        <button class="w3-btn w3-blue">
-                            Submit text message
-                        </button>
+                    <div class="w3-container w3-panel w3-margin w3-display-container">
+                        <div class="w3-display-right">
+                            <button class="w3-btn w3-green">
+                                Call Video
+                            </button>
+                            <button class="w3-btn w3-green">
+                                Call Audio
+                            </button>
+                            <button class="w3-btn w3-blue">
+                                Submit text message
+                            </button>
+                        </div>
+                        <br>
+                        <br>
                     </div>
-                    <br>
-                    <br>
                 </div>
-            </div>
-            </div>
-        </section>
 
-        <section class="w3-container w3-panel especiais notvisible" id="controls-room">
-            
+    </section>
+
+    <section class="conteudo w3-container w3-panel especiais notvisible" id="controls-room">
+
             <h3 class="w3-center">Controls</h3>
-
+    
             <div class="w3-container w3-panel w3-card-2">
                 <h4 class="w3-center">Tv</h4>
                 <label for="status_controle_tv">Tv status: {{status_controle_tv}}</label>
-
+    
                 <input type="radio" class="w3-radio" name="status_controle_tv" id="status_controle_tv" value="On"
                     ng-model="status_controle_tv" ng-checked="true" checked />
                 <input type="radio" class="w3-radio" name="status_controle_tv" id="status_controle_tv" value="Off"
                     ng-model="status_controle_tv" />
                 <br>
                 <label for="status_controle_tv_volume">Volume: {{status_controle_tv_volume}}</label>
-                <input type="range" class="w3-input" value="55" ng-disabled="status_controle_tv == 'Off'" id="status_controle_tv_volume"
-                    name="status_controle_tv_volume" ng-model="status_controle_tv_volume" step="5" min="0" max="100">
-
+                <input type="range" class="w3-input" value="55" ng-disabled="status_controle_tv == 'Off'"
+                    id="status_controle_tv_volume" name="status_controle_tv_volume" ng-model="status_controle_tv_volume"
+                    step="5" min="0" max="100">
+    
                 <label for="status_controle_tv_chanel">Channel: {{status_controle_tv_chanel}}</label>
-                <input type="number" class="w3-input" value="12" ng-disabled="status_controle_tv == 'Off'" id="status_controle_tv_chanel"
-                    name="status_controle_tv_chanel" ng-model="status_controle_tv_chanel" step="1" min="0" max="100">
+                <input type="number" class="w3-input" value="12" ng-disabled="status_controle_tv == 'Off'"
+                    id="status_controle_tv_chanel" name="status_controle_tv_chanel" ng-model="status_controle_tv_chanel"
+                    step="1" min="0" max="100">
                 <br>
             </div>
             <div class="w3-container w3-panel w3-card-2">
                 <h4 class="w3-center">Air Conditioner</h4>
                 <label for="status_controle_air">Air Conditioner status: {{status_controle_air}}</label>
-
+    
                 <input type="radio" class="w3-radio" name="status_controle_air" id="status_controle_air" value="On"
                     ng-model="status_controle_air" ng-checked="true" checked />
                 <input type="radio" class="w3-radio" name="status_controle_air" id="status_controle_air" value="Off"
                     ng-model="status_controle_air" />
                 <br>
                 <label for="status_controle_air_temperature">Temperature: {{status_controle_air_temperature}} C°</label>
-                <input type="range" class="w3-input" value="20" ng-disabled="status_controle_air == 'Off'" id="status_controle_air_temperature"
-                    name="status_controle_air_temperature" ng-model="status_controle_air_temperature" step="5" min="0"
-                    max="100">
+                <input type="range" class="w3-input" value="20" ng-disabled="status_controle_air == 'Off'"
+                    id="status_controle_air_temperature" name="status_controle_air_temperature"
+                    ng-model="status_controle_air_temperature" step="5" min="0" max="100">
                 <br>
             </div>
             <div class="w3-container w3-panel w3-border notvisible">
                 <h3 class="w3-center">Lights</h3>
-
+    
                 <div ng-if="usuario.numero == apartamento.numero" ng-repeat="apartamento in apartamentos">
-
+    
                     <div ng-repeat="quarto in apartamento.quartos">
-
+    
                         <div class="w3-container w3-panel w3-card-2 w3-col l2 m2 sm12 w3-margin">
                             <h4 class="w3-center">Bedroom Light</h4>
-
+    
                             <label for="status_controle_bedroom_light">Bedroom Light status:
                                 {{status_controle_bedroom_light}}</label>
-
-                            <input type="radio" class="w3-radio" name="status_controle_bedroom_light" id="status_controle_bedroom_light"
-                                value="On" ng-model="status_controle_bedroom_light" ng-checked="true" checked />
-                            <input type="radio" class="w3-radio" name="status_controle_bedroom_light" id="status_controle_bedroom_light"
-                                value="Off" ng-model="status_controle_bedroom_light" />
+    
+                            <input type="radio" class="w3-radio" name="status_controle_bedroom_light"
+                                id="status_controle_bedroom_light" value="On" ng-model="status_controle_bedroom_light"
+                                ng-checked="true" checked />
+                            <input type="radio" class="w3-radio" name="status_controle_bedroom_light"
+                                id="status_controle_bedroom_light" value="Off" ng-model="status_controle_bedroom_light" />
                             <br>
                             <br>
                         </div>
                     </div>
                 </div>
-
-
-
+    
+    
+    
                 <div class="w3-container w3-panel w3-card-2 w3-col l2 m2 sm12 w3-margin">
                     <h4 class="w3-center">Living Room Light</h4>
-
+    
                     <label for="status_controle_livin_room_light">Living Room status:
                         {{status_controle_livin_room_light}}</label>
-
-                    <input type="radio" class="w3-radio" name="status_controle_livin_room_light" id="status_controle_livin_room_light"
-                        value="On" ng-model="status_controle_livin_room_light" ng-checked="true" checked />
-                    <input type="radio" class="w3-radio" name="status_controle_livin_room_light" id="status_controle_livin_room_light"
-                        value="Off" ng-model="status_controle_livin_room_light" />
+    
+                    <input type="radio" class="w3-radio" name="status_controle_livin_room_light"
+                        id="status_controle_livin_room_light" value="On" ng-model="status_controle_livin_room_light"
+                        ng-checked="true" checked />
+                    <input type="radio" class="w3-radio" name="status_controle_livin_room_light"
+                        id="status_controle_livin_room_light" value="Off" ng-model="status_controle_livin_room_light" />
                     <br>
                     <br>
                 </div>
                 <div class="w3-container w3-panel w3-card-2 w3-col l2 m2 sm12 w3-margin">
                     <h4 class="w3-center">Kitchen Light</h4>
-
-                    <label for="status_controle_kitchen_light">Kitchen Light status: {{status_controle_kitchen_light}}</label>
-
-                    <input type="radio" class="w3-radio" name="status_controle_kitchen_light" id="status_controle_kitchen_light"
-                        value="On" ng-model="status_controle_kitchen_light" ng-checked="true" checked />
-                    <input type="radio" class="w3-radio" name="status_controle_kitchen_light" id="status_controle_kitchen_light"
-                        value="Off" ng-model="status_controle_kitchen_light" />
+    
+                    <label for="status_controle_kitchen_light">Kitchen Light status:
+                        {{status_controle_kitchen_light}}</label>
+    
+                    <input type="radio" class="w3-radio" name="status_controle_kitchen_light"
+                        id="status_controle_kitchen_light" value="On" ng-model="status_controle_kitchen_light"
+                        ng-checked="true" checked />
+                    <input type="radio" class="w3-radio" name="status_controle_kitchen_light"
+                        id="status_controle_kitchen_light" value="Off" ng-model="status_controle_kitchen_light" />
                     <br>
                     <br>
                 </div>
                 <div class="w3-container w3-panel w3-card-2 w3-col l2 m2 sm12 w3-margin">
                     <h4 class="w3-center">Bathroom Light</h4>
-
+    
                     <label for="status_controle_bathroom_light">Bathroom Light status:
                         {{status_controle_bathroom_light}}</label>
-
-                    <input type="radio" class="w3-radio" name="status_controle_bathroom_light" id="status_controle_bathroom_light"
-                        value="On" ng-model="status_controle_bathroom_light" ng-checked="true" checked />
-                    <input type="radio" class="w3-radio" name="status_controle_bathroom_light" id="status_controle_bathroom_light"
-                        value="Off" ng-model="status_controle_bathroom_light" />
+    
+                    <input type="radio" class="w3-radio" name="status_controle_bathroom_light"
+                        id="status_controle_bathroom_light" value="On" ng-model="status_controle_bathroom_light"
+                        ng-checked="true" checked />
+                    <input type="radio" class="w3-radio" name="status_controle_bathroom_light"
+                        id="status_controle_bathroom_light" value="Off" ng-model="status_controle_bathroom_light" />
                     <br>
                     <br>
                 </div>
-
+    
             </div>
             <div class="w3-container w3-panel w3-card-2">
                 <h4 class="w3-center">Play Audio/music</h4>
                 <label for="status_controle_audio">Audio/music status: {{status_controle_audio}}</label>
-
+    
                 <input type="radio" class="w3-radio" name="status_controle_audio" id="status_controle_audio" value="On"
                     ng-model="status_controle_audio" ng-checked="true" checked />
                 <input type="radio" class="w3-radio" name="status_controle_audio" id="status_controle_audio" value="Off"
                     ng-model="status_controle_audio" />
                 <br>
                 <label for="status_controle_audio_volume">Volume: {{status_controle_audio_volume}}</label>
-                <input type="range" class="w3-input" value="55" ng-disabled="status_controle_audio == 'Off'" id="status_controle_audio_volume"
-                    name="status_controle_audio_volume" ng-model="status_controle_audio_volume" step="5" min="0" max="100">
-
+                <input type="range" class="w3-input" value="55" ng-disabled="status_controle_audio == 'Off'"
+                    id="status_controle_audio_volume" name="status_controle_audio_volume"
+                    ng-model="status_controle_audio_volume" step="5" min="0" max="100">
+    
                 <div class="w3-container w3-panel w3-center">
-                    <input type="submit" class="w3-btn w3-gray" id="status_controle_audio_previus" name="status_controle_audio_previus"
-                        ng-model="status_controle_audio_previus" value="Previus" />
-                    <input type="submit" class="w3-btn w3-green" id="status_controle_audio_play" name="status_controle_audio_play"
-                        model="status_controle_audio_play" value="Play/Pause" />
-                    <input type="submit" id="status_controle_audio_next" name="status_controle_audio_next" model="status_controle_audio_next"
-                        class="w3-btn w3-gray" value="Next" />
-                    <input type="submit" id="status_controle_audio_stop" name="status_controle_audio_stop" model="status_controle_audio_stop"
-                        class="w3-btn w3-black" value="Stop" />
+                    <input type="submit" class="w3-btn w3-gray" id="status_controle_audio_previus"
+                        name="status_controle_audio_previus" ng-model="status_controle_audio_previus" value="Previus" />
+                    <input type="submit" class="w3-btn w3-green" id="status_controle_audio_play"
+                        name="status_controle_audio_play" model="status_controle_audio_play" value="Play/Pause" />
+                    <input type="submit" id="status_controle_audio_next" name="status_controle_audio_next"
+                        model="status_controle_audio_next" class="w3-btn w3-gray" value="Next" />
+                    <input type="submit" id="status_controle_audio_stop" name="status_controle_audio_stop"
+                        model="status_controle_audio_stop" class="w3-btn w3-black" value="Stop" />
                 </div>
-
+    
                 <br>
             </div>
-        </div>
-
-
+    
+            </div>
+    
+    
         </section>
-    </main>
+    
+    
+        </main>
 </body>
 
 </html>
